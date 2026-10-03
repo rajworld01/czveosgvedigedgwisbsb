@@ -1,0 +1,45 @@
+{
+  "name": "Network Stress Test Bot",
+  "description": "Simple IP testing bot with clean UI",
+  "keywords": ["telegram", "bot", "network", "testing"],
+  "repository": "https://github.com/",
+  "logo": "",
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot Token from @BotFather",
+      "required": true
+    },
+    "ADMIN_ID": {
+      "description": "Your Telegram User ID",
+      "required": true
+    },
+    "MAX_REQUESTS": {
+      "description": "Maximum requests per test",
+      "value": "100000",
+      "required": false
+    },
+    "THREAD_COUNT": {
+      "description": "Number of threads",
+      "value": "100",
+      "required": false
+    },
+    "ATTACK_TIMEOUT": {
+      "description": "Test timeout in seconds",
+      "value": "300",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
